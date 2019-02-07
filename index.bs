@@ -591,6 +591,12 @@ Follow the <a href="https://www.w3.org/2001/tag/doc/promises-guide#one-time-even
 in the <strong><a href="https://www.w3.org/2001/tag/doc/promises-guide">Writing
 Promise-Using Specifications</a></strong> guideline.
 
+<h3 id="promises-and-events">Events should fire before promises resolve</h3>
+
+In the case that an event is being dispatched as part of a promise being
+resolved, then the event should be dispatched before the promise resolves, rather
+than after.
+
 <h3 id="dont-invent-event-like">Don't invent your own event listener-like infrastructure</h3>
 
 For recurring events, it could be convenient to create a custom pair of APIs to
